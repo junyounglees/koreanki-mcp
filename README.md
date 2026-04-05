@@ -16,20 +16,22 @@
 
 ## 설정
 
-Claude Desktop의 설정 파일에 아래 내용을 추가하세요.
+### Claude Desktop
 
-**macOS**: `~/Library/Application Support/Claude/claude_desktop_config.json`
-**Windows**: `%APPDATA%\Claude\claude_desktop_config.json`
+1. 좌측 하단 프로필 아이콘 클릭
+2. **Settings > Connectors > Go to Customize**
+3. **Connectors** 옆 **+** 버튼 클릭
+4. 아래 내용 입력 후 **Add** 클릭
 
-```json
-{
-  "mcpServers": {
-    "koreanki": {
-      "type": "url",
-      "url": "https://koreanki.vercel.app/api/mcp"
-    }
-  }
-}
+| 항목 | 값 |
+|------|---|
+| Name | `koreanki` |
+| Remote MCP server URL | `https://koreanki.vercel.app/api/mcp` |
+
+### Claude Code
+
+```bash
+claude mcp add koreanki --transport url https://koreanki.vercel.app/api/mcp
 ```
 
 ## 사용법
